@@ -1,0 +1,40 @@
+body {
+    background-color: #1c1b21;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+}
+
+button {
+    border-radius: 20px;
+    width: 80px;
+    height: 35px;
+}
+
+#header {
+    width: 98%;
+    display: flex;
+    flex-direction: row;
+    gap: 600px;
+}
+
+#red {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 10px;
+}
+#blue {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    gap: 10px;
+}
+
+
+#banner {
+    position: relative;
+    z-index: 1;
+    display: block;
+}
