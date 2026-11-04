@@ -14,7 +14,8 @@ button {
     display: flex;
     align-items: center;         
     justify-content: space-between; 
-    background-color: #131315;  
+    background-color: #131315;
+    padding: 20px;
 
 }
 
@@ -72,14 +73,79 @@ button {
     font-weight: 600px;
     font-style: normal;
     text-align: center;
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;  
 }
 
 button {
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
-     font-weight: 600px;
-     font-style: normal;
-     font-variation-settings:
+    font-weight: 600px;
+    font-style: normal;
+    font-variation-settings:
       "wdth" 100;
     background-color: #49b5e0;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#search-input {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600px;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 20px;
+}
+
+.loginPage{
+    background-image: url('skyline.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#login-container {
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 40px;
+    background-color:  #1c1b21;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    line-height: 1.5;
+}
+
+#signup-container {
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 40px;
+    background-color:  #1c1b21;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    line-height: 1.5;
 }
