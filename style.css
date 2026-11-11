@@ -66,7 +66,6 @@ button {
     font-style: normal;
     text-align: center;
 }
-
 #copyright {
     font-family: "Libre Caslon Condensed", serif;
     font-optical-sizing: auto;
@@ -148,4 +147,18 @@ button {
     flex-direction: column;
     gap: 20px;
     line-height: 1.5;
+}
+
+#checkbox-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#remember-me, #email-updates {
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
