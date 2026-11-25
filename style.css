@@ -10,6 +10,34 @@ button {
     height: 35px;
 }
 
+
+button:hover {
+    background-color: #217dbb;
+    cursor: pointer;
+    animation: glow 2s infinite;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px #49b5e0;
+    }
+    50% {
+        box-shadow: 0 0 20px #49b5e0;
+    }
+    100% {
+        box-shadow: 0 0 5px #49b5e0;
+    }
+}
+
 #header {
     display: flex;
     align-items: center;         
@@ -36,6 +64,18 @@ button {
     border-color: #1c1b21;
     width: 99%;
     height: 500px;
+    animation: zoomIn 1s ease-out;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 #about {
@@ -44,12 +84,44 @@ button {
   gap: 40px;     
 }
 
-#img-about {
+#img-about-left {
     margin: auto;
     width: 27%;    
     height: auto; 
     padding: 10px;
+    animation: slideInLeft 0.6s ease-out forwards;
     
+}
+
+#img-about-right {
+    margin: auto;
+    width: 27%;    
+    height: auto; 
+    padding: 10px;
+    animation: slideInRight 0.6s ease-out forwards;
+    
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 #text-content {
@@ -72,11 +144,10 @@ button {
     font-weight: 600px;
     font-style: normal;
     text-align: center;
-    position: fixed;
-    left: 50%;
-    bottom: 20px;
-    transform: translate(-50%, -50%);
-    margin: 0 auto;  
+    padding: 15px;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+
 }
 
 button {
@@ -161,4 +232,66 @@ button {
     display: flex;
     align-items: center;
     gap: 5px;
+}
+
+@media screen and (max-width: 599px) {
+
+     #header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    #red,
+    #blue {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    #red input {
+        width: 90%;
+        max-width: 250px;
+    }
+
+    #blue button {
+        width: 150px;
+    }
+
+    #logo {
+        width: 200px;
+        height: auto;
+    }
+
+    #banner {
+        margin: 5px auto;
+        max-width: 95%;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+
+    #header {
+        flex-wrap: wrap;
+    }
+
+    img {
+        width: 80%;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+
+    #header {
+        flex-direction: row;
+    }
+
+    img {
+        width: auto;
+    }
 }
